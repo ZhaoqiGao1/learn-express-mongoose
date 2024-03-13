@@ -3,7 +3,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var BookSchema = new Schema(
-  {}
+  {
+      title: {type: String, required: true},
+
+  }
 );
 
 //Export model
