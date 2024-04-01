@@ -15,6 +15,8 @@ function get_book_dtl(id) {
           .select('imprint status');
 }
 
+//ggtrying
+
 exports.show_book_dtls = async (res, id) => {
   const results = await Promise.all([get_book(id).exec(), get_book_dtl(id).exec()])
   try {
