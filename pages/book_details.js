@@ -1,9 +1,10 @@
 let async = require('async');
 let Book = require('../models/book');
 let BookInstance = require('../models/bookinstance');
+let mongoose = require('mongoose');
 
 function get_book(id) {
-    if (typeof id !== "string") {
+    if (!mongoose.Types.ObjectId.isValid(id) {
         return ({status: "error"});
     }
     return Book.findOne({'_id': {$eq: id}}).populate('author');
